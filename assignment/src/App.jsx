@@ -19,12 +19,6 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
 
-          {/* //protected route */}
-          {/* <Route element={<ProtectedRoute isAuthenticated={!!token} />}>
-            <Route path="/dashBoard" element={<DashBoard />} />
-            <Route path="/details/:id" element={<ShowUserDetails />} />
-            <Route path="/addUser" element={<AddUser />} />
-          </Route> */}
 
           {token ? (
             <Route element={<Logout />}>

@@ -1,9 +1,9 @@
-import axios from "axios";
+// import axios from "axios";
 
-const api = axios.create({
-    baseURL:"https://67f2043dc733555e24ae8de4.mockapi.io"
-})
-
+// const api = axios.create({
+//     baseURL:"https://67f2043dc733555e24ae8de4.mockapi.io"
+// })
+import { api } from "../constant/Instance"
 export const fatchUsers=async ()=>{
     const res = await api.get("/user")
     return res.data
