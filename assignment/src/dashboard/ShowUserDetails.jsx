@@ -13,12 +13,15 @@ const ShowUserDetails = () => {
      if (error) return <p>Error fetching user</p>;
   return (
     
+    <div className="flex items-center justify-center min-h-screen">
     <div className="p-6 max-w-md mx-auto bg-white rounded-2xl shadow-md space-y-4">
-    <h2 className="text-2xl font-bold text-gray-800">Name: {data.name}</h2>
-    <h3 className="text-lg text-blue-600">Technology: {data.technology}</h3>
-    <h3 className="text-lg text-green-600">Company: {data.company}</h3>
-    <p className="text-gray-600">Description: {data.description}</p>
+      <h2 className="text-2xl font-bold text-gray-800">Name: {data.name}</h2>
+      <h3 className="text-lg text-blue-600">Technology: {data.technology}</h3>
+      <h3 className="text-lg text-green-600">Company: {data.company}</h3>
+      <p className="text-gray-600">Description: {data.description}</p>
+    </div>
   </div>
+  
   
     
   )

@@ -40,47 +40,61 @@ const AddUser = () => {
 
 
   return (
-    <>
-      <form onSubmit={handleSubmit} className="max-w-sm mx-auto mt-10">
-      <InputField
-        label="name"
-        type="text"
-        name="name"
-        value={data.name}
-        onChange={handleChange}
-        placeholder="Enter your name"
-      />
-      <InputField
-        label="technology"
-        type="text"
-        name="technology"
-        value={data.technology}
-        onChange={handleChange}
-        placeholder="Enter your technology"
-      />
-      <InputField
-        label="company"
-        type="text"
-        name="company"
-        value={data.company}
-        onChange={handleChange}
-        placeholder="Enter your company"
-      />
-      <InputField
-        label="description"
-        type="description"
-        name="description"
-        minLength={20} 
-        value={data.description}
-        onChange={handleChange}
-        placeholder="Enter your description"
-      />
-      <button type="submit" className="w-full p-2 bg-blue-500 text-white rounded">
-        submit
-      </button>
-    </form>
-    </>
-  )
+    (
+      <div className="flex justify-center items-center min-h-screen bg-gray-100 p-6">
+          <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-md w-full max-w-md space-y-4">
+              <h2 className="text-2xl font-bold text-center text-gray-800">Add User</h2>
+
+              <InputField
+                  label="Name : "
+                  type="text"
+                  name="name"
+                  value={data.name}
+                  onChange={handleChange}
+                  placeholder="Enter your name"
+                  className="border border-gray-300 p-2 rounded-lg w-full"
+              />
+
+              <InputField
+                  label="Technology : "
+                  type="text"
+                  name="technology"
+                  value={data.technology}
+                  onChange={handleChange}
+                  placeholder="Enter your technology"
+                  className="border border-gray-300 p-2 rounded-lg w-full"
+              />
+
+              <InputField
+                  label="Company : "
+                  type="text"
+                  name="company"
+                  value={data.company}
+                  onChange={handleChange}
+                  placeholder="Enter your company"
+                  className="border border-gray-300 p-2 rounded-lg w-full"
+              />
+
+              <InputField
+                  label="Description : "
+                  type="text"
+                  name="description"
+                  value={data.description}
+                  onChange={handleChange}
+                  placeholder="Enter your description"
+                  className="border border-gray-300 p-2 rounded-lg w-full"
+                  minLength={20}
+              />
+
+              <button
+                  type="submit"
+                  className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+              >
+                  Submit
+              </button>
+          </form>
+      </div>
+  ))
 }
 
 export default AddUser
